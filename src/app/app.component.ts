@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,7 +10,8 @@ export class AppComponent {
   title = 'pixow';
 
   constructor(
-    public translate: TranslateService
+    public translate: TranslateService,
+    private el: ElementRef
   ) {
     translate.addLangs(['en', 'zh-CN']);
     translate.setDefaultLang('en');

@@ -26,6 +26,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## browsersSupport
+Embrace new technology
+Use [es2015](https://kangax.github.io/compat-table/es6/)
+
+
 ## mark
-TODO：404 page
+TODO：
+### 404 page
 [github 404](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site).
+
+### build output js subfolder
+https://stackoverflow.com/questions/43283915/ng-build-move-scripts-to-subfolder

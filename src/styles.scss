@@ -1,1 +1,149 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/css/bootstrap.min.css';
+
+body,h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+body {
+  background: #ffffff;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#cf15f8, #5f16a9,);
+  background: -moz-linear-gradient(#cf15f8, #5f16a9,);
+  background: -webkit-linear-gradient(#cf15f8, #5f16a9,);
+  background: -ms-linear-gradient(#cf15f8, #5f16a9,);
+  z-index: 999;
+  overflow: hidden; 
+}
+.preloader .spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  -webkit-animation: sk-rotate 2s infinite linear;
+  animation: sk-rotate 2s infinite linear;
+}
+.preloader .dot1, .preloader .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #ffffff;
+  border-radius: 100%;
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+.preloader .dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-ms-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes sk-rotate {
+  100% {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg); } }
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@-moz-keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@-ms-keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+
+.bg_img {
+  background-size: cover;
+  background-position: center;
+}
+
+.cmn-btn {
+  padding: 12px 30px;
+  min-width: 230px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 999px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  background-image: -moz-linear-gradient(0deg, #e2906e 0%, #e83a99 100%);
+  background-image: -webkit-linear-gradient(0deg, #e2906e 0%, #e83a99 100%);
+  background-image: -ms-linear-gradient(0deg, #e2906e 0%, #e83a99 100%);
+  box-shadow: 2.419px 9.703px 12.48px 0.52px rgba(232, 58, 153, 0.5);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+    background-size: 120%;
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}

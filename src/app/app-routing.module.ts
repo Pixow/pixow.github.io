@@ -1,16 +1,23 @@
+import { FullComponent } from './layout/full/full.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
-  }, {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
-  }, {
-    path: 'games',
-    loadChildren: () => import('./pages/games/games.module').then(m => m.GamesModule)
+    component: FullComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+      }, {
+        path: 'home',
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+      }, {
+        path: 'games',
+        loadChildren: () => import('./pages/games/games.module').then(m => m.GamesModule)
+      }
+    ]
   }
 ];
 
