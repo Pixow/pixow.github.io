@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pixow"
+    }
+  },
+  "defaultProject": "pixow",
+  "cli": {
+    "analytics": "f67a7367-b13d-4d56-8999-0846ea9350e7"
+  }
 }

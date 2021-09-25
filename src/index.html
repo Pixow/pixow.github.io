@@ -6,6 +6,7 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
 </head>
 <body>
   <app-root>
@@ -18,5 +19,28 @@
     </div>
     <!-- prealoader end -->
   </app-root>
+
+  <!-- jQuery library -->
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(window).on('load', function(){
+      // mobile menu js
+      $(".navbar-collapse>ul>li>a, .navbar-collapse ul.sub-menu>li>a").on("click", function() {
+        let element = $(this).parent("li");
+        if (element.hasClass("open")) {
+          element.removeClass("open");
+          element.find("li").removeClass("open");
+        }
+        else {
+          element.addClass("open");
+          element.siblings("li").removeClass("open");
+          element.siblings("li").find("li").removeClass("open");
+        }
+      });
+    })
+  </script>
 </body>
 </html>
