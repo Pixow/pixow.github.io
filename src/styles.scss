@@ -136,9 +136,10 @@ a {
   -moz-border-radius: 999px;
   -ms-border-radius: 999px;
   -o-border-radius: 999px;
-  background-image: -moz-linear-gradient(0deg, #e2906e 0%, #e83a99 100%);
-  background-image: -webkit-linear-gradient(0deg, #e2906e 0%, #e83a99 100%);
-  background-image: -ms-linear-gradient(0deg, #e2906e 0%, #e83a99 100%);
+  background: linear-gradient(90deg, #e2906e 0%, #e83a99 100%);
+  background: -moz-linear-gradient(90deg, #e2906e 0%, #e83a99 100%);
+  background: -webkit-linear-gradient(90deg, #e2906e 0%, #e83a99 100%);
+  background: -ms-linear-gradient(90deg, #e2906e 0%, #e83a99 100%);
   box-shadow: 2.419px 9.703px 12.48px 0.52px rgba(232, 58, 153, 0.5);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;

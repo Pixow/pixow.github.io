@@ -24,6 +24,8 @@
   <script src="assets/js/jquery-3.5.1.min.js"></script>
   <!-- bootstrap js -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- TweenMax js -->
+  <script src="assets/js/TweenMax.min.js"></script>
 
   <script>
     $(window).on('load', function(){
@@ -40,6 +42,31 @@
           element.siblings("li").find("li").removeClass("open");
         }
       });
+
+      $(".hero").on('mousemove',function(e) {
+        parallaxIt(e, ".el-1", -45);
+        parallaxIt(e, ".el-2", -25);
+        parallaxIt(e, ".el-3", -50);
+        parallaxIt(e, ".el-4", -35);
+        parallaxIt(e, ".el-5", -60);
+        parallaxIt(e, ".el-6", -40);
+        parallaxIt(e, ".el-7", -45);
+        parallaxIt(e, ".el-8", -35);
+        parallaxIt(e, ".el-9", -50);
+        parallaxIt(e, ".el-10", -35);
+        parallaxIt(e, ".el-11", -40);
+      });
+      
+      function parallaxIt(e, target, movement) {
+        var $this = $(".hero");
+        var relX = e.pageX - $this.offset().left;
+        var relY = e.pageY - $this.offset().top;
+      
+        TweenMax.to(target, 1, {
+          x: (relX - $this.width() / 2) / $this.width() * movement,
+          y: (relY - $this.height() / 2) / $this.height() * movement
+        });
+      }
     })
   </script>
 </body>

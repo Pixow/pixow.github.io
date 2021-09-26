@@ -6,7 +6,8 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.f40dfc7ebdbd056a7227.css"></head>
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+<link rel="stylesheet" href="styles.0b8d8b6763d6b4dcd8f7.css"></head>
 <body>
   <app-root>
     <!-- preloader start  -->
@@ -18,5 +19,55 @@
     </div>
     <!-- prealoader end -->
   </app-root>
-<script src="runtime.a637ab63d2b5c202ffdc.js" defer></script><script src="polyfills.534a6a5a9f30b71b1497.js" defer></script><script src="main.d311f1c8cb7d0dd3adb3.js" defer></script></body>
+
+  <!-- jQuery library -->
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- TweenMax js -->
+  <script src="assets/js/TweenMax.min.js"></script>
+
+  <script>
+    $(window).on('load', function(){
+      // mobile menu js
+      $(".navbar-collapse>ul>li>a, .navbar-collapse ul.sub-menu>li>a").on("click", function() {
+        let element = $(this).parent("li");
+        if (element.hasClass("open")) {
+          element.removeClass("open");
+          element.find("li").removeClass("open");
+        }
+        else {
+          element.addClass("open");
+          element.siblings("li").removeClass("open");
+          element.siblings("li").find("li").removeClass("open");
+        }
+      });
+
+      $(".hero").on('mousemove',function(e) {
+        parallaxIt(e, ".el-1", -45);
+        parallaxIt(e, ".el-2", -25);
+        parallaxIt(e, ".el-3", -50);
+        parallaxIt(e, ".el-4", -35);
+        parallaxIt(e, ".el-5", -60);
+        parallaxIt(e, ".el-6", -40);
+        parallaxIt(e, ".el-7", -45);
+        parallaxIt(e, ".el-8", -35);
+        parallaxIt(e, ".el-9", -50);
+        parallaxIt(e, ".el-10", -35);
+        parallaxIt(e, ".el-11", -40);
+      });
+      
+      function parallaxIt(e, target, movement) {
+        var $this = $(".hero");
+        var relX = e.pageX - $this.offset().left;
+        var relY = e.pageY - $this.offset().top;
+      
+        TweenMax.to(target, 1, {
+          x: (relX - $this.width() / 2) / $this.width() * movement,
+          y: (relY - $this.height() / 2) / $this.height() * movement
+        });
+      }
+    })
+  </script>
+<script src="runtime.0082be2d5e216e119f43.js" defer></script><script src="polyfills.534a6a5a9f30b71b1497.js" defer></script><script src="main.f1e0428b43131ce4e484.js" defer></script></body>
 </html>
