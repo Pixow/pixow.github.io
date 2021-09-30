@@ -105,3 +105,258 @@
     top: 44%;
     right: 11%; }
 }
+
+/* trailer section css start */
+.trailer_bg {
+  width: 100%;
+  height: 390px;
+  // background-image: url(../images/bg/video.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 40px; }
+  .trailer_bg .trailer_head {
+    max-width: 445px;
+    height: 173px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-image: url(../images/elements/header-el.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+    .trailer_bg .trailer_head h1 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #ffffff;
+      margin: 0px; }
+
+.trailer_container {
+  position: relative;
+  top: -100px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 90px; }
+  .trailer_container .trailer_items {
+    display: none; }
+    .trailer_container .trailer_items .trailer_thumbnail {
+      max-width: 1110px;
+      height: 498px;
+      position: relative; }
+      .trailer_container .trailer_items .trailer_thumbnail img {
+        width: 100%;
+        height: 498px;
+        border-radius: 30px;
+        border: none; }
+      .trailer_container .trailer_items .trailer_thumbnail .play_button {
+        text-decoration: none;
+        display: inline-block;
+        width: 155px;
+        height: 155px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 4px solid #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; }
+        .trailer_container .trailer_items .trailer_thumbnail .play_button i {
+          font-size: 42px;
+          color: #ffffff; }
+        .trailer_container .trailer_items .trailer_thumbnail .play_button:hover {
+          text-decoration: none;
+          color: #ffffff; }
+    .trailer_container .trailer_items .trailer_video {
+      max-width: 1110px;
+      height: 498px;
+      display: none; }
+      .trailer_container .trailer_items .trailer_video iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        border: none;
+        outline: none; }
+  .trailer_container .trailer_details {
+    padding: 30px;
+    background-image: -moz-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%);
+    background-image: -webkit-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%);
+    background-image: -ms-linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%);
+    background-image: linear-gradient(89deg, #5f16a9 0%, #cf15f8 100%);
+    box-shadow: 0px 12px 43px 0px #301d75;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 300px;
+    position: absolute;
+    bottom: -130px;
+    right: 130px; }
+    .trailer_container .trailer_details .game_content {
+      display: none; }
+    .trailer_container .trailer_details .active {
+      display: block; }
+    .trailer_container .trailer_details h4 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: capitalaize;
+      color: #ffffff;
+      text-align: center; }
+    .trailer_container .trailer_details a {
+      text-decoration: underline;
+      display: inline-block;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #ffffff;
+      margin-top: 16px; }
+    .trailer_container .trailer_details .prev {
+      position: absolute;
+      bottom: 30px;
+      left: 28px;
+      text-decoration: none;
+      display: inline-block;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #f91e68;
+      cursor: pointer; }
+      .trailer_container .trailer_details .prev:hover {
+        text-decoration: none;
+        color: #f91e68; }
+    .trailer_container .trailer_details .next {
+      position: absolute;
+      bottom: 30px;
+      right: 28px;
+      text-decoration: none;
+      display: inline-block;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #f91e68;
+      cursor: pointer; }
+      .trailer_container .trailer_details .next:hover {
+        text-decoration: none;
+        color: #f91e68; }
+
+@media (max-width: 992px) {
+  .trailer_container {
+    position: relative;
+    left: 0px;
+    right: 0px; }
+    .trailer_container .trailer_items .trailer_thumbnail {
+      width: 100%;
+      height: 400px; }
+      .trailer_container .trailer_items .trailer_thumbnail .play_button {
+        width: 100px;
+        height: 100px; }
+        .trailer_container .trailer_items .trailer_thumbnail .play_button i {
+          font-size: 30px; }
+      .trailer_container .trailer_items .trailer_thumbnail img {
+        width: 100%;
+        height: 400px; }
+    .trailer_container .trailer_items .trailer_video {
+      width: 100%;
+      height: 400px; }
+      .trailer_container .trailer_items .trailer_video iframe {
+        width: 100%;
+        height: 400px; } }
+@media (max-width: 768px) {
+  .trailer_bg {
+    width: 100%;
+    height: 300px; }
+    .trailer_bg .trailer_head h1 {
+      font-size: 48px; }
+
+  .trailer_container {
+    position: relative;
+    top: -80px;
+    left: 0px;
+    right: 0px; }
+    .trailer_container .trailer_items .trailer_thumbnail {
+      width: 100%;
+      height: 300px; }
+      .trailer_container .trailer_items .trailer_thumbnail .play_button {
+        width: 70px;
+        height: 70px; }
+        .trailer_container .trailer_items .trailer_thumbnail .play_button i {
+          font-size: 18px; }
+      .trailer_container .trailer_items .trailer_thumbnail img {
+        width: 100%;
+        height: 300px;
+        border-radius: 8px; }
+    .trailer_container .trailer_items .trailer_video {
+      width: 100%;
+      height: 300px; }
+      .trailer_container .trailer_items .trailer_video iframe {
+        width: 100%;
+        height: 300px;
+        border-radius: 8px; }
+    .trailer_container .trailer_details {
+      position: absolute;
+      right: 50px; }
+      .trailer_container .trailer_details h4 {
+        font-size: 30px; } }
+@media (max-width: 425px) {
+  .trailer_bg .trailer_head h1 {
+    font-size: 36px; }
+
+  .trailer_container .trailer_items .trailer_thumbnail {
+    width: 100%;
+    height: 230px; }
+    .trailer_container .trailer_items .trailer_thumbnail .play_button {
+      width: 50px;
+      height: 50px; }
+      .trailer_container .trailer_items .trailer_thumbnail .play_button i {
+        font-size: 16px; }
+    .trailer_container .trailer_items .trailer_thumbnail img {
+      width: 100%;
+      height: 230px; }
+  .trailer_container .trailer_items .trailer_video {
+    width: 100%;
+    height: 230px; }
+    .trailer_container .trailer_items .trailer_video iframe {
+      width: 100%;
+      height: 230px; }
+  .trailer_container .trailer_details {
+    max-width: 260px;
+    position: absolute;
+    right: 20px;
+    padding: 30px 15px; }
+    .trailer_container .trailer_details h4 {
+      font-size: 24px; } }
+/* trailer section css end */
+
+/* about section css start */
+.about-obj-1 {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.about-obj-2 {
+  position: absolute;
+  bottom: 120px;
+  left: 0; }
+
+.about-content .section-header {
+  margin-bottom: 15px; }
+
+.about-thumb {
+  position: relative; }
+  .about-thumb .image-1 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+    animation: customBounce 3s linear infinite; }
+  .about-thumb .image-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
+/* about section css end */
