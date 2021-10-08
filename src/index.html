@@ -110,6 +110,12 @@
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";  
     }
+
+    //custom script start for game trailer slider
+    function closeThumbnail(parent) {
+      parent.style.display = "none";
+      parent.nextElementSibling.style.display='block';
+    }
   </script>
 </body>
 </html>

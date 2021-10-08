@@ -68,6 +68,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "pixow:build",
+            "host": "0.0.0.0",
             "port": 8061
           },
           "configurations": {
